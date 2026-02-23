@@ -1,4 +1,4 @@
-# Type Confusion Vulnerability Demonstration in Rust
+# Type Confusion in Rust 🦀
 
 This project demonstrates how a logic flaw similar to "Type Confusion" can be introduced and mitigated in a Rust actix-web application. While Rust's static typing prevents classic type confusion, vulnerabilities can arise from making incorrect assumptions after deserializing flexible data formats like JSON.
 
@@ -18,11 +18,11 @@ Prerequisites
 Rust and Cargo installed (https://www.rust-lang.org/tools/install)
 
 1. Create a New Rust Project
-cargo new rust_type_confusion_demo
-cd rust_type_confusion_demo
+   cargo new rust_type_confusion_demo
+   cd rust_type_confusion_demo
 
 2. Add Dependencies
-Add the following lines to your Cargo.toml file:
+   Add the following lines to your Cargo.toml file:
 
 [dependencies]
 actix-web = "4"
@@ -40,7 +40,7 @@ The server will start and listen on http://127.0.0.1:8080.
 How to Test the Vulnerability
 
 1. Demonstrate the Vulnerable Endpoint
-We will send a POST request to the /vulnerable/signup endpoint with a JSON payload where the username is an array containing an XSS payload.
+   We will send a POST request to the /vulnerable/signup endpoint with a JSON payload where the username is an array containing an XSS payload.
 
 Attack Payload:
 
